@@ -39,7 +39,7 @@ Run `proj MyProjectName` to jump the project called "MyProjectName" in your proj
 By default the project folder is set to `~/projects/`. To change this, add the following line to your `~/.zshrc`:
 
 ```
-export ZSH_PROJ_ROOT_DEFAULT=/my/custom/project/dir
+export ZSH_PROJ_ROOT=/my/custom/project/dir
 ```
 
 ### Case Sensitive
