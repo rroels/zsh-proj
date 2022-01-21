@@ -28,4 +28,8 @@ plugins=(
 
 Open a new terminal, or run `source ~/.zshrc` to start using the plugin.
 
+## Usage
+
+Run `proj MyProjectName` to jump the project called "MyProjectName" in your projects folder. Project names are autocompleted, so `proj MyP` followed by a tab will automatically expand to `proj MyProjectName` (assuming this directory exists).
+
 ## Configuration
