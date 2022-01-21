@@ -1,2 +1,11 @@
-proj() { cd ~/projects/$1; }
-compctl -M 'm:{a-zA-Z}={A-Za-z}' -W ~/projects/ -/ proj
+export ZSH_PROJ_ROOT_DEFAULT=~/projects/
+export ZSH_PROJ_CASE_SENSITIVE_DEFAULT=0
+
+if [ -z $ZSH_PROJ_CASE_SENSITIVE ] || [ $ZSH_PROJ_CASE_SENSITIVE -eq "0" ]; then
+	ZSH_PROJ_COMPLETION_MATCHER='-M m:{a-zA-Z}={A-Za-z}'
+else
+	ZSH_PROJ_COMPLETION_MATCHER=''
+fi
+
+proj() { cd ${ZSH_PROJ_ROOT:-$ZSH_PROJ_ROOT_DEFAULT}/$1; }
+compctl $ZSH_PROJ_COMPLETION_MATCHER -W ${ZSH_PROJ_ROOT:-ZSH_PROJ_ROOT_DEFAULT} -/ proj
