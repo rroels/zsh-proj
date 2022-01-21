@@ -2,7 +2,12 @@
 
 ## Goal
 
+Most developers have a directory containing all their different projects. This ZSH plugin allows command-line users to quickly jump to a specific project by running `proj MyProjectName`. The `proj` command provides auto-completion for the project names for speedy navigation.
+
 ## Requirements
+
+* ZSH
+* [oh-my-zsh](https://ohmyz.sh/)
 
 ## Installation
 
