@@ -33,3 +33,21 @@ Open a new terminal, or run `source ~/.zshrc` to start using the plugin.
 Run `proj MyProjectName` to jump the project called "MyProjectName" in your projects folder. Project names are autocompleted, so `proj MyP` followed by a tab will automatically expand to `proj MyProjectName` (assuming this directory exists).
 
 ## Configuration
+
+### Project Folder
+
+By default the project folder is set to `~/projects/`. To change this, add the following line to your `~/.zshrc`:
+
+```
+export ZSH_PROJ_ROOT_DEFAULT=/my/custom/project/dir
+```
+
+### Case Sensitive
+
+By default, the autocompletion is case insensitive. If you want to make it case sensitive, add the following line to your `~/.zshrc`:
+
+
+```
+export ZSH_PROJ_CASE_SENSITIVE=1
+```
+
